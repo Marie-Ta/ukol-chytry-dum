@@ -1,10 +1,18 @@
 import React from 'react';
-import Lights from '../Lights';
+import './style.css';
 
-const Dashboard = () => {
+import Lights from '../Lights';
+import Climate from '../Climate';
+import Blinds from '../Blinds';
+import Energy from '../Energy';
+
+const Dashboard = ({data}) => {
     return(
         <main className="dashboard">
             <Lights/>
+            <Climate/>
+            <Blinds/>
+            <Energy/>
         </main>
     );
 }

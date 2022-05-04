@@ -1,14 +1,21 @@
 import React from 'react';
+import './style.css';
 import lightIsOff from './light-off.svg';
 import lightIsOn from './light-on.svg';
 import { useState } from 'react';
 
 const Light = ({name, state}) => {
 
-    const [lightState, setLightState] = useState('off');
+    const [lightState, setLightState] = useState({state});
 	
 	const handleClick = () => {
-		setLightState('on');
+		if (lightState === 'off'){
+			setLightState('on');
+		} else {
+			setLightState('off');
+		}
+		
+		console.log({name, state});
 	};
 
     return(
